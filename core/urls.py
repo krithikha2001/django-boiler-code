@@ -10,10 +10,14 @@ from django.urls import path, include  # add this
 urlpatterns = [
     path('admin/', admin.site.urls),  # Django admin route
     path('customers/', include("customers.urls")),  # Django customers route
-    path("", include("app.urls")),  # UI Kits Html files
-    path("", include("authentication.urls")),  # Auth routes - login / register
+    path('', include('blog.urls')),
+    path('login/', include("app.urls")),  # UI Kits Html files
+    # Auth routes - login / register
+    path('login/', include("authentication.urls")),
 ]
 
 if settings.DEVEL:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
