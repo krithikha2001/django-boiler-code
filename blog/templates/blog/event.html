@@ -33,7 +33,8 @@
             </p>
             <!-- <a href="#" class="btn btn-primary">Read More</a> -->
           </div>
-        <h6>Date of event: {{e.date_posted}}</h6> 
+        <h6>Date of event: {{e.date_posted|date:"F d, Y"}}</h6> 
+        <h7>MAnaged by:{{e.admin}}</h7>
         </div>
       </div>
      
