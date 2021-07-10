@@ -21,7 +21,7 @@
                             <div class="text-center text-md-center mb-4 mt-md-0">
                                 <h1 class="mb-0 h3">
                                     <a target="_blank"
-                                       href="https://themesberg.com/product/django/volt-admin-dashboard-template">Django Volt</a> - Sign UP
+                                       href="https://youngistaanfoundation.org/">Youngistaan Foundation</a> - Sign UP
                                 </h1>
                                 <br />
                                 <p>
@@ -58,9 +58,33 @@
                                     <span class="text-error">{{ form.email.errors }}</span>
                                 </div>
                                 <!-- End of Form -->
-
-                                <div class="form-group">
-
+                               
+                                <!-- End of Form -->
+                                <div class="form-group mb-4">
+                                    <label for="email">Your Full Name</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3"><span class="fas fa-user-shield"></span>                                        {{ form.full_name }}
+                                    </span>
+                                    </div>
+                                    <span class="text-error">{{ form.full_name.errors }}</span>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="email">Your Date of birth(YYYY-MM-DD)</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3"><span class="fas fa-calender-alt"></span></span>
+                                        {{ form.birth_date }}
+                                    </div>
+                                    <span class="text-error">{{ form.birth_date.errors }}</span>
+                                </div>
+                                    <div class="form-group mb-4">
+                                        <label for="email">Name of College/Company</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon3"><span class="fas fa-calender-alt"></span></span>
+                                            {{ form.organization }}
+                                        </div>
+                                        <span class="text-error">{{ form.organization.errors }}</span>
+                                    </div>
+    
                                     <!-- Form -->
                                     <div class="form-group mb-4">
                                         <label for="password">Password</label>
@@ -81,6 +105,15 @@
                                         </div>  
                                         <span class="text-error">{{ form.password2.errors }}</span>
                                     </div>
+                                    <div class="form-group mb-4">
+                                        <label for="password">Catrgory of work</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon4"><span class="fas fa-unlock-alt"></span></span>
+                                            {{ form.category }}
+                                        </div>  
+                                        <span class="text-error">{{ form.category.errors }}</span>
+                                    </div>
+                                    <div class="form-group">
 
                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                         <div class="form-check">
@@ -99,10 +132,24 @@
                             </form>
                             <div class="d-flex justify-content-center align-items-center mt-4">
                                 <span class="font-weight-normal">
-                                    &copy; <a  href="https://themesberg.com" target="_blank">Themesberg</a> 
-                                    - coded by <a target="_blank" href="https://appseed.us">AppSeed</a>
+                                    &copy; <a  href="https://youngistaanfoundation.org/" target="_blank">Youngistaan Foundation</a> 
+                                    - coded by <a target="_blank" href="https://appseed.us">Team 13</a>
                                 </span>
                             </div>
+                            <br>
+                            <br>
+                            - Important - Please read<hr>
+<b>1. NOTE: There will be an online orientation for new volunteers, due to the pandemic. The meeting information will be sent to you over the mail or phone. 
+</b><br>2. There are a few changes in the volunteering activities due to the Pandemic. However a few of the activities. But in case you want to start volunteer immediately call 9100142224.
+<br>3. We require of you a minimum of 4 hours every weekend + any extra time during the weekday. *Compulsory.
+<br>4. Every program needs a minimum of 6 months to one-year commitment  (on weekends),
+<br>5. * Volunteers will receive certificates only after completing  1 year / 400 active hours in one year apart from other responsibilities.
+<br>6. It's compulsory for volunteers to attend organisation held activities.
+<br>7. Please note failure to abide any of the following mentions without any intimation volunteer will be dismissed from their responsibilities.
+<br>7. You are responsible for any personal property/valuables. YF is not liable in case of damage/loss.
+Please Note:  All active volunteers will be eligible for the year-end 'Volunteer Awards', held by the organisation depending on their contributions throughout the year.
+Thank you! Any suggestions and appreciation please write them down.<hr>
+<cite>* Please ask the leader for more information on this.</cite>
                         </div>
                     </div>
                 </div>

@@ -6,23 +6,43 @@
           <div class="d-sm-flex align-items-center justify-content-between">
             <div>
               <br>
-              <br>
-              <h1><span class="text-white">Name of organization </span><span class="text-warning"> or project </span></h1>
+              <h1><span class="text-white">Become a </span><span class="text-warning"> Volunteer</span></h1>
               <p class="lead my-4">
-                Hiya. Tavishi here. Here we can give some overview, the picture beside can be logo of NGO or something. If this
-                is not logo then a cool computer pic or something can be here.
+                We, at Youngistaan are recognized under 80G, save tax by saving a life. 
+                Join us and <br>
+                become a part of this youth-led movement.<br>
+                Be a star, save someone’s life!
               </p>
-              <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">
-                Login/Register
-              </button>
+              {% if user.is_authenticated %}              
+             {% else %}
+             <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="{url 'login'}">
+              Login/Register
+            </button>            
+              {%endif%}
+             <br>
             </div>
-            <img class="img-fluid w-40 d-none d-sm-block" src="media\default.jpg" alt="" />
+            <img class="img-fluid w-40 rounded-circle mb-4 d-none d-sm-block" src="media\logo.png" alt="" />
             <!-- image fluid is to keep the image bound in the container 
             d-none is don't display. d-sm-block is display on small block. Means small se bada krne pe hoga-->
 
           </div>
         </div>
       </section>
+
+      <!-- Newsletter -->
+ <section class="bg-secondary text-light p-3">
+  <div class="container">
+    <div class="d-md-flex justify-content-between align-items-center">
+      <h4 class="mb-2 mb-md-0">Sign Up For Our Newsletter</h4>
+
+      <div class="input-group news-input">
+        <input type="text" class="form-control" placeholder="Enter Email" />
+        <button class="btn btn-dark btn-lg" type="button">Submit</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   {% for post in posts %}
 
@@ -37,6 +57,8 @@
   </div>
 </article> -->
 
+
+ 
 <!-- Boxes -->
 <section class="p-5">
   <div class="container">
@@ -90,30 +112,165 @@
 </section>
 {% endfor %} -->
 
+<!-- Question Accordion -->
+<section id="questions" class="p-5">
+  <div class="container">
+    <h2 class="text-center mt-3 mb-4">Frequently Asked Questions</h2>
+    <div class="accordion accordion-flush" id="questions">
+      <!-- Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#question-one"
+          >
+           What are the programs conducted?
+          </button>
+        </h2>
+        <div
+          id="question-one"
+          class="accordion-collapse collapse"
+          data-bs-parent="#questions"
+        >
+          <div class="accordion-body">
+           The organization has various programs such as Food and Nutrition program,
+           Gender Program etc. which are inclined towards 7 UN Sustainable development goals
+           and address multiple issues such as hunger, homelessness, 
+           gender, education, animal welfare, youth, emergency responses and more.
+          </div>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#question-two"
+          >
+            How much does it cost to volunteer?
+          </button>
+        </h2>
+        <div
+          id="question-two"
+          class="accordion-collapse collapse"
+          data-bs-parent="#questions"
+        >
+          <div class="accordion-body">
+            Youngistaan Foundation does not charge any money for applications for jobs, internships or to volunteer.
+             Please avoid such fraudulent activity and inform Youngistaan Foundation and the authorities immediately.
+          </div>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#question-three"
+          >
+          Where exactly are you located?
+          </button>
+        </h2>
+        <div
+          id="question-three"
+          class="accordion-collapse collapse"
+          data-bs-parent="#questions"
+        >
+          <div class="accordion-body">
+            The Youngistaan Headquarters are at  Banjara Hills, Hyderabad, Telangana  
+            and currently, we conduct
+   programs in: Bangalore, Delhi, Bhopal and Mumbai. <br>
+   However, if you want to start a Youngistaan Foundation project in your city, get in touch with us and be the change! 
+
+          </div>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#question-four"
+          >
+            This is an extra question, we can think about it.
+          </button>
+        </h2>
+        <div
+          id="question-four"
+          class="accordion-collapse collapse"
+          data-bs-parent="#questions"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            beatae fuga animi distinctio perspiciatis adipisci velit maiores
+            totam tempora accusamus modi explicabo accusantium consequatur,
+            praesentium rem quisquam molestias at quos vero. Officiis ad
+            velit doloremque at. Dignissimos praesentium necessitatibus
+            natus corrupti cum consequatur aliquam! Minima molestias iure
+            quam distinctio velit.
+          </div>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <!-- <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#question-five"
+          >
+            Do you help me find a job?
+          </button>
+        </h2>
+        <div
+          id="question-five"
+          class="accordion-collapse collapse"
+          data-bs-parent="#questions"
+        >
+          <div class="accordion-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            beatae fuga animi distinctio perspiciatis adipisci velit maiores
+            totam tempora accusamus modi explicabo accusantium consequatur,
+            praesentium rem quisquam molestias at quos vero. Officiis ad
+            velit doloremque at. Dignissimos praesentium necessitatibus
+            natus corrupti cum consequatur aliquam! Minima molestias iure
+            quam distinctio velit.
+          </div>
+        </div> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
 
 
 <section id="aboutus" class="p-5 bg-dark text-light">
   <div class="container">
     <div class="row align-items-center justify-content-between">
-      <div class="col-md p-5">
+      <div class="col-md p-4">
         <p class="lead"></p>
         <h2  class="color-red"><span text-warning> About us</span></h2>
         
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Similique deleniti possimus magnam corporis ratione facere!
+        Youngistaan Foundation is an NGO based in India that works to improve the lives of the most underprivileged and disadvantaged people through programs that address: hunger, homelessness, poverty, education inequity, gender inequality, taboos on menstruation, emergency responses, animal rights, capacity building and many more issues.
         </p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-          reiciendis eius autem eveniet mollitia, at asperiores suscipit
-          quae similique laboriosam iste minus placeat odit velit quos,
-          nulla architecto amet voluptates?
+          Registered in 2014, Youngistaan Foundation has engaged with 50,000+ young people and provided them with a platform to connect with other socially aware individuals and effect real change in our neighbourhoods and communities through our programs as volunteers
+           If you want to start a Youngistaan Foundation project in your city, get in touch with us and be the change! 
         </p>
-        <a href="#" class="btn btn-light mt-3">
+        <!-- <a href="#" class="btn btn-light mt-3">
           <i class="bi bi-chevron-right"></i> Read More
-        </a>
+        </a> -->
       </div>
       <div class="col-md">
-        <img src="img/react.svg" class="img-fluid" alt="" />
+        <img src="media/About.png" class="img-fluid" alt="" />
       </div>
     </div>
   </div>
@@ -124,23 +281,26 @@
   <div class="container">
     <div class="row g-4">
       <div class="col-md">
-        <h2 class="text-center mb-4 color-dark">Contact Info</h2>
+        <h2 class="text-center mb-4 mt-3 color-dark">Contact Info</h2>
         <ul class="list-group list-group-flush lead">
           <li class="list-group-item">
-            <span class="fw-bold">Main Location:</span> Mumbai, India
+            <span class="fw-bold">Main Location:</span> Hyderabad, India
           </li>
           <li class="list-group-item">
-            <span class="fw-bold">Phone Number:</span> 9999999999
+            <span class="fw-bold">Phone Number:</span> +919100142224
           </li>
           
           <li class="list-group-item">
-            <span class="fw-bold"> Email ID:</span> test@gmail.com
+            <span class="fw-bold" > Email ID:</span>  heroes@youngistaanfoundation.org 
           </li>
+        </ul>
+        <h5 class=" mt-4 color-dark ml:2">&emsp; For corporate and campaign parternerships:-</h5>
+        <ul class="list-group list-group-flush lead">
           <li class="list-group-item"> 
-            <span class="fw-bold">Technical Support:</span> 999999999
+            <span class="fw-bold">Phone Number:</span> +91-9885342224
           </li>
           <li class="list-group-item">
-            <span class="fw-bold">Technical Support:</span> techhelp@gmail.com             
+            <span class="fw-bold">Email ID:</span> arun@youngistaanfoundation.org            
            </li>
         </ul>
       </div>
@@ -163,7 +323,7 @@ crossorigin="anonymous"
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
-    center: [76.85078002213356, 29.966757539469626],
+    center: [78.43827606570846, 17.416488882299006],
     zoom: 14,
   
   })
