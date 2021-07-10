@@ -1,0 +1,47 @@
+{% extends "blog/base.html" %}
+  {% block content %}
+  <hr>Hi</h1>
+  
+  {% for e in posts %}
+<!-- <article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ post.author }}</a>
+      <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+    <p class="article-content">{{ post.content }}</p>
+  </div>
+</article> -->
+
+
+ 
+<!-- Boxes -->
+<section class="p-5">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md">
+        
+        <div class="card bg-dark text-light">
+          <div class="card-body text-center">
+            <div class="h1 mb-3">
+              <i class="bi bi-laptop"></i>
+            </div>
+            <h3 class="card-title text-warning mb-3">{{e.title}}</h3>
+            <p class="card-text">
+                  {{e.content}}
+                  {{e.date_posted}}
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Read More</a> -->
+          </div>
+        </div>
+      </div>
+     
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% endblock content %}

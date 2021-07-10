@@ -27,7 +27,10 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect("/customers/profile/")
+                if(user.is_superuser):
+                    return redirect("/event")
+                else:
+                    return redirect("/customers/profile/")
             else:
                 msg = 'Invalid credentials'
         else:
@@ -52,7 +55,7 @@ def register_user(request):
             msg = 'User created - please <a href="/login">login</a>.'
             success = True
 
-            return redirect("/customers/profile/")
+          #  return redirect("/login/")
 
         else:
             msg = 'Form is not valid'
